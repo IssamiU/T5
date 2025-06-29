@@ -1,0 +1,13 @@
+npm install back&front
+
+env
+- DATABASE_URL="mysql://root:"password"@localhost:3306/"DB"?connection_limit=5"
+
+mysql local rodando
+
+backend
+- npx prisma db seed
+- npm run dev
+
+frontend
+- npm start

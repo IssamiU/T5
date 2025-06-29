@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Cliente {
+  id        Int       @id @default(autoincrement())
+  nome      String
+  nomeSocial String?
+  email     String?
+  pets      Pet[]
+  endereco  Endereco?
+  telefones Telefone[]
+  consumos  Consumo[]
+}
+
+model Endereco {
+  id                    Int     @id @default(autoincrement())
+  estado                String
+  cidade                String
+  bairro                String
+  rua                   String
+  numero                String
+  codigoPostal          String
+  informacoesAdicionais String?
+  cliente               Cliente @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  clienteId             Int     @unique
+}
+
+model Telefone {
+  id        Int     @id @default(autoincrement())
+  ddd       String
+  numero    String
+  cliente   Cliente @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  clienteId Int
+}
+
+model Pet {
+  id        Int     @id @default(autoincrement())
+  nome      String
+  tipo      String
+  raca      String?
+  genero    String
+  cliente   Cliente @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  clienteId Int
+}
+
+model Produto {
+  id       Int       @id @default(autoincrement())
+  nome     String
+  preco    Float
+  consumos Consumo[]
+}
+
+model Servico {
+  id       Int       @id @default(autoincrement())
+  nome     String
+  preco    Float
+  consumos Consumo[]
+}
+
+model Consumo {
+  id             Int      @id @default(autoincrement())
+  clienteId      Int
+  produtoId      Int?
+  servicoId      Int?
+  quantidade     Int
+  valorTotal     Float
+  data           DateTime
+
+  itemNome       String
+  itemTipo       String   
+  precoUnitario  Float   
+  
+  cliente        Cliente  @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  produto        Produto? @relation(fields: [produtoId], references: [id])
+  servico        Servico? @relation(fields: [servicoId], references: [id])
+}
