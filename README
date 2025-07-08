@@ -6,7 +6,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 ## Estrutura do Repositório
 
-```
+
 /
 ├── backend/
 │   ├── src/
@@ -21,7 +21,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 │   └── ...
 ├── README.md
 └── ...
-```
+
 
 
 ## Versões Importantes Utilizadas
