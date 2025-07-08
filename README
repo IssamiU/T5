@@ -32,7 +32,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 | Dependência         | Versão       |
 |---------------------|--------------|
-| Node.js             | 16.x (obrigatório) |
+| Node.js             | 18.x (obrigatório) |
 | express             | ^5.1.0       |
 | prisma              | ^6.10.1      |
 | @prisma/client      | ^6.10.1      |
@@ -45,7 +45,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 | Dependência         | Versão       |
 |---------------------|--------------|
-| Node.js             | 16.x (obrigatório) |
+| Node.js             | 18.x (obrigatório) |
 | Vite                | ^5.0.8       |
 | React               | ^18.2.0      |
 | React DOM           | ^18.2.0      |
@@ -62,13 +62,13 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 ## Pré-requisitos
 
-- **Node.js:** Versão 16.x (obrigatório para backend e frontend)
-- **npm:** Compatível com Node 16.x
+- **Node.js:** Versão 18.x (obrigatório para backend e frontend)
+- **npm:** Compatível com Node 18.x
 - **MySQL:** Versão 8.0.38 Community rodando localmente
 - **Vite:** Versão ^5.0.8 (já incluída nas dependências do frontend)
 - **Prisma:** ^6.10.1 (já incluída nas dependências do backend)
 
-> **Atenção:** O projeto exige Node.js 16.x. Versões diferentes podem causar erros de incompatibilidade, especialmente com Vite, Prisma e outras dependências.
+> **Atenção:** O projeto exige Node.js 18.x. Versões diferentes podem causar erros de incompatibilidade, especialmente com Vite, Prisma e outras dependências.
 
 ---
 
@@ -77,13 +77,12 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 ### 1. Banco de Dados MySQL
 
 - Certifique-se de que o MySQL está rodando localmente na porta padrão (`localhost:3306`).
-- Crie um banco de dados com o nome desejado (por exemplo, `DB`).
 
 ### 2. Variáveis de Ambiente
 
 O arquivo `.env` **deve ser criado manualmente** na pasta `backend/` com o seguinte conteúdo (ajuste usuário, senha e banco conforme sua configuração):
 
-DATABASE_URL="mysql://root:password@localhost:3306/DB?connection_limit=5"
+DATABASE_URL="mysql://root:password@localhost:3306/petlovers?connection_limit=5"
 
 ---
 
@@ -129,7 +128,7 @@ npm run dev
 
 ## Observações Importantes
 
-- **Node.js 16.x é obrigatório** para ambos backend e frontend. Outras versões podem causar incompatibilidades.
+- **Node.js 18.x é obrigatório** para ambos backend e frontend. Outras versões podem causar incompatibilidades.
 - **Vite** é utilizado no frontend. Certifique-se de que está usando a versão correta (já incluída nas dependências).
 - **Prisma** é utilizado para integração com o banco de dados. Sempre execute `npx prisma generate` e `npx prisma migrate dev` após alterações no schema.
 - O arquivo `.env` nunca deve ser versionado no Git (está no `.gitignore`). Sempre crie manualmente em cada ambiente.
