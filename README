@@ -109,6 +109,4 @@ npm run dev
 - O arquivo `.env` nunca deve ser versionado no Git (está no `.gitignore`). Sempre crie manualmente em cada ambiente.
 - O MySQL deve estar rodando localmente e acessível conforme configurado no `.env`.
 
----
-
 
