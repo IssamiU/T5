@@ -8,6 +8,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 ## Estrutura do Repositório
 
+´´´
 /
 ├── backend/
 │   ├── src/
@@ -22,6 +23,7 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 │   └── ...
 ├── README.md
 └── ...
+´´´
 
 ---
 
@@ -87,17 +89,21 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 
 ### Backend
 
+´´´
 cd backend
 npm install
 npx prisma generate
 npx prisma migrate dev
 npm run dev
+´´´
 
 ### Frontend
 
+´´´
 cd frontend
 npm install
 npm run dev
+´´´
 
 ---
 
