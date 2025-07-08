@@ -7,22 +7,24 @@ Esta atividade consiste em uma aplicação full stack dividida em dois módulos 
 ---
 
 ## Estrutura do Repositório
+
 ```
 /
 ├── backend/
-│ ├── src/
-│ ├── prisma/
-│ ├── package.json
-│ ├── .env # (deve ser criado manualmente)
-│ └── ...
+│   ├── src/
+│   ├── prisma/
+│   ├── package.json
+│   ├── .env # (deve ser criado manualmente)
+│   └── ...
 ├── frontend/
-│ ├── src/
-│ ├── public/
-│ ├── package.json
-│ └── ...
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ...
 ├── README.md
 └── ...
 ```
+
 
 ---
 
